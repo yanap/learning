@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+var db = openDatabase("EmployeeDB", "", "Employee Database", 1024 * 1024);
+db.transaction(function(tx) {
+    tx.executeSql("create table if not exists Employee (" +
+    " employee_id integer primary key autoincrement," +
+    " name, age integer)");
+});
+
+function load() {
+    db.transaction(function(tx) {
+        tx.executeSql("select * from Employee", [], function(tx, rs) {
+            var list = document.getElementById("list");
+            list.innerHTML = "";
+            var rows = rs.rows;
+            for(var i = 0; i < rows.length; i++) {
+                var row = rows.item(i);
+                var option = new Option( row.employee_id + "\t" + row.name + "\t(" + row.age + "歳", row.employee_id); 
+                list.options[list.options.length] = option;
+            }
+        });
+    });
+}
+
+function add() {
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    db.transaction(function(tx) {
+        tx.executeSql("insert into Employee (name, age) values (?, ?)", [name, age],
+        function (tx, rs) {
+             alert("従業員ID[" + rs.insertId + "]のレコードが作成されました。");
+             load();
+        });
+    });
+}
+
+function remove() {
+    var list = document.getElementById("list");
+    if(list.selectedIndex < 0) {
+        return;
+    }
+    var selected = list.options[list.selectedIndex].value;
+    db.transaction(function(tx) {
+        tx.executeSql("delete from Employee where employee_id = ?", [selected], function() { load(); });
+    });
+}
+
+</script>
+</head>
+
+<body onload="load()">
+<h1>従業員管理画面</h1>
+名前:<input type="text" id="name">
+年齢:<input type="number" id="age">
+<button onclick="add()">追加</button>
+<hr>
+<select id="list" size="5" style="width: 300px;"></select>
+<button onclick="remove()">削除</button><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
