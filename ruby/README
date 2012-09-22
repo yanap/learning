@@ -15,3 +15,5 @@ Emacs support available.
 
 hello.rb:2:puts("Hello, World!");
 (rdb:1) help
+
+ri String #リファレンス、ただし英語
