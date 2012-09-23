@@ -8,6 +8,8 @@ hello = "Hello"; # セミコロンによる式区切り
 message = hello + "world!"; # 改行による式区切り
 puts message
 
+greeting = "Hello, "; message = greeting + "world!"
+
 # white space
 puts      (           # 括弧が開いたままなので次の行に続く
      "Hello World"      )
