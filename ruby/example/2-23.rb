@@ -1,5 +1,7 @@
 book_to_author = {
-	"book" => "author",
+	"ruby in nutshell" => "flanagan",
+	"programming ruby" => "thomas",
+	"awdwr" => "thomas",
 }
 
 book_to_author.each do |book, author|

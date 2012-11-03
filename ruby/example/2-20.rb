@@ -1,7 +1,7 @@
 book_to_author = {
-	"Ruby in Nutshell" => "Flanagan",
-	"Programming Ruby" => "Thomas",
-	"AWDwR" => "Thomas",
+	"ruby in nutshell" => "flanagan",
+	"programming ruby" => "thomas",
+	"awdwr" => "thomas",
 }
 p book_to_author["Programming Ruby"] #=> "Thomas"
 # 存在しないキーの場合
