@@ -1,4 +1,18 @@
 #encoding: utf-8
+
+story = <<EOS
+Solomon Grundy,
+Born on Monday,
+Christend on Tuesday,
+Married on Wendnesday,
+Took ill onThursday,
+Worse on Friday,
+Died on Saturday,
+Buried on Sunday,
+This is the end
+of Solomon Grundy,
+EOS
+
 p "分解"
 p "a,bb, ccc, dddd".split(/,\s?/)
 
