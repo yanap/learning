@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object name="main" class="wxFrame">
+		<style>wxDEFAULT_FRAME_STYLE</style>
+		<title>Welcome to WxRuby</title>
+		<size>400, 300</size>
+		<object class="wxTextCtrl" name="url">
+			<pos>10,10</pos>
+			<size>320,30</size>
+			<focus>true</focus>
+			<value>http://www.ruby-lang.org</value>
+		</object>
+		<object class="wxButton" name="button">
+			<label>go</label>
+			<pos>345,15</pos>
+			<size>50,30</size>
+		</object>
+		<object class="wxHtmlWindow" name="render">
+			<pos>10,50</pos>
+			<size>380,250</size>
+		</object>
+	</object>
+</resource>
