@@ -1,7 +1,8 @@
+#encoding: utf-8
 #!/usr/bin/ruby
 
 (1..100).each do |i|
-	case i % 15 			
+	case i % 15
 	when 0 				then puts "FizzBuzz"
 	when 3, 6, 9, 12 	then puts "Fizz"
 	when 5, 10 			then puts "Buzz"
@@ -9,13 +10,13 @@
 	end
 end
 
-array = ["Bear", "Benford", "Egan"] # ÇÛÎó¥ê¥Æ¥é¥ë
+array = ["Bear", "Benford", "Egan"] # é…åˆ—ãƒªãƒ†ãƒ©ãƒ«
 p array.map{|name| "G. #{name}"}    #=>["G. Bear", "G. Benford", "G. Egan"]
-# ¥Ï¥Ã¥·¥å¥ê¥Æ¥é¥ë
+# ãƒãƒƒã‚·ãƒ¥ãƒªãƒ†ãƒ©ãƒ«
 hash = {
 	"Baxter" => "Stephen", "Stross" => "Charles", "Reynolds" => "Alastair"
 }
-# ¹àÌÜ¤´¤È¤Î·«¤êÊÖ¤·
+# é …ç›®ã”ã¨ã®ç¹°ã‚Šè¿”ã—
 hash.each do |key, value|
 	puts "#{value} #{key}"
 end
