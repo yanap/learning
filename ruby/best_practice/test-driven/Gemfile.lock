@@ -3,18 +3,59 @@ GEM
   specs:
     Ascii85 (1.0.2)
     afm (0.2.0)
+    atk (2.0.2)
+      glib2 (= 2.0.2)
+    cairo (1.12.6)
+      pkg-config
+    gdk_pixbuf2 (2.0.2)
+      glib2 (= 2.0.2)
+    glib2 (2.0.2)
+      pkg-config
+    gtk2 (2.0.2)
+      atk (= 2.0.2)
+      gdk_pixbuf2 (= 2.0.2)
+      pango (= 2.0.2)
     hashery (2.1.1)
+    hoe (3.7.3)
+      rake (>= 0.8, < 11.0)
+    pango (2.0.2)
+      cairo (>= 1.12.5)
+      glib2 (= 2.0.2)
     pdf-reader (1.3.3)
       Ascii85 (~> 1.0.0)
       afm (~> 0.2.0)
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
+    pkg-config (1.1.4)
     prawn (0.12.0)
       pdf-reader (>= 0.9.0)
       ttfunk (~> 1.0.2)
+    rake (10.1.0)
+    rr (1.1.2)
     ruby-rc4 (0.1.5)
     test-unit (2.5.5)
+    test-unit-ext (0.5.0)
+    test-unit-full (0.0.3)
+      test-unit
+      test-unit-notify
+      test-unit-rr
+      test-unit-runner-fox
+      test-unit-runner-gtk2
+      test-unit-runner-tk
+    test-unit-must (1.0.0)
+    test-unit-notify (1.0.1)
+      test-unit (>= 2.4.9)
+    test-unit-rr (1.0.3)
+      rr (>= 1.1.1)
+      test-unit (>= 2.5.2)
+    test-unit-runner-fox (0.0.1)
+      hoe (>= 1.6.0)
+    test-unit-runner-gtk2 (0.0.2)
+      gtk2
+      test-unit
+    test-unit-runner-tk (0.0.1)
+      hoe (>= 1.6.0)
     ttfunk (1.0.3)
 
 PLATFORMS
@@ -23,3 +64,6 @@ PLATFORMS
 DEPENDENCIES
   prawn
   test-unit
+  test-unit-ext
+  test-unit-full
+  test-unit-must

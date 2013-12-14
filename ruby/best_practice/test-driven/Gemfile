@@ -3,4 +3,7 @@ source "https://rubygems.org"
 
 # gem "rails"
 gem "test-unit"
+gem "test-unit-full"
+gem "test-unit-must"
+gem "test-unit-ext"
 gem "prawn"
