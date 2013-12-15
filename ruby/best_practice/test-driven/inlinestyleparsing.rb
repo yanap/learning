@@ -28,4 +28,11 @@ class TestInlineStyleParsing < Test::Unit::TestCase
     assert_equal ["Hello <indigo>Ch", "</b>", "arl", "</b>", "ie</indigo>"],
       @pdf.parse_inline_styles("Hello <indigo>Ch</b>arl</b>ie</indigo>")
   end
+
+  must "be able to check whether a string needs to be parsed" do
+    @pdf = Prawn::Document.new
+    assert !@pdf.send(:style_tag?, "Hello World")
+    assert @pdf.send(:style_tag?, "Hello <i>Fine</i> World")
+  end
+
 end
