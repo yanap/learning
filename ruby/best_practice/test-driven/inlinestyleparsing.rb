@@ -5,8 +5,7 @@ require_relative 'test_unit_extensions'
 
 class Prawn::Document
   def parse_inline_styles(text)
-    segments = text.split( %r{(</?[ib]>)} ).delete_if {|x| x.empty?}
-    segments.size == 1 ? segments.first : segments
+    text.split( %r{(</?[ib]>)} ).delete_if{|x| x.empty?}
   end
 end
 
