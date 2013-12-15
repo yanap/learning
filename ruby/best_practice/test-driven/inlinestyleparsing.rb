@@ -30,4 +30,3 @@ class TestInlineStyleParsing < Test::Unit::TestCase
   end
 
 end
-
