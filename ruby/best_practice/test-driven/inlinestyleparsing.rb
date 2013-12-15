@@ -11,11 +11,6 @@ end
 
 # test
 class TestInlineStyleParsing < Test::Unit::TestCase
-  must "simply return the string if styles are not found" do
-    @pdf = Prawn::Document.new
-    assert_equal "Hello World", @pdf.parse_inline_styles("Hello World")
-  end
-
   must "parse italic tags" do
     @pdf = Prawn::Document.new
     assert_equal ["Hello ", "<i>", "Fine", "</i>", " World"],
