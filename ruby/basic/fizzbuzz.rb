@@ -1,5 +1,5 @@
 class FizzBuzz
   def say(n)
-    1
+    n
   end
 end
