@@ -12,6 +12,13 @@ describe FizzBuzz do
       fizzbuzz.say(1).should == 1
     end
   end
+
+  context '与えられた数字が2のとき' do
+    it '2を返すこと' do
+      fizzbuzz = FizzBuzz.new
+      fizzbuzz.say(2).should == 2
+    end
+  end
 end
 
 
