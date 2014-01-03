@@ -38,6 +38,12 @@ describe FizzBuzz do
       subject.say(5).should == 'Buzz'
     end
   end
+
+  context '与えられた数字が15のとき' do
+    it 'FizzBuzzを返すこと' do
+      subject.say(15).should == 'FizzBuzz'
+    end
+  end
 end
 
 
