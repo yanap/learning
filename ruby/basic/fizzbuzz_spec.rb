@@ -20,6 +20,18 @@ describe FizzBuzz do
       subject.say(2).should == 2
     end
   end
+
+  context '与えられた数字が3のとき' do
+    it 'Fizzを返すこと' do
+      subject.say(3).should == 'Fizz'
+    end
+  end
+
+  context '与えられた数字が9のとき' do
+    it 'Fizzを返すこと' do
+      subject.say(9).should == 'Fizz'
+    end
+  end
 end
 
 
