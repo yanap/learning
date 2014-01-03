@@ -19,12 +19,7 @@ class BookShelf
   end
 
   def search(keyword)
-    result = @books.select do |book|
-      book.title =~ /#{keyword}/
-    end
-    result += @books.select do |book|
-      book.author =~ /#{keyword}/
-    end
+    result = search_by_title_or_author(keyword)
 
     if result.size == 0
       return '検索結果は0件です'
@@ -33,6 +28,16 @@ class BookShelf
 #{result.size}件ヒットしました
 #{result.map{|r| "#{r.title}: #{r.author}著" }.join("\n")}
       EOF
+    end
+  end
+
+  private
+  def search_by_title_or_author(keyword)
+    result = @books.select do |book|
+      book.title =~ /#{keyword}/
+    end
+    result += @books.select do |book|
+      book.author =~ /#{keyword}/
     end
   end
 end
