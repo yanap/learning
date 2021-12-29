@@ -11,16 +11,28 @@ npm init
 npm install --save-dev typescript tslint @types/node
 ```
 
-## tsconfig.json
+* tsconfig.json
 
 ```
 ./node_modules/.bin/tsc --help
 ```
 
-## tslint.json
+* tslint.json
 
 ```
  ./node_modules/.bin/tslint --init
 ```
 
 https://palantir.github.io/tslint/rules/
+
+* index.ts
+
+TypeScriptコードをTSCでコンパイルします
+
+```
+./node_modules/.bin/tsc
+```
+
+```
+node ./src/index.js
+```
