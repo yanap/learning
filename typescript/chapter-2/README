@@ -36,3 +36,11 @@ TypeScriptコードをTSCでコンパイルします
 ```
 node ./src/index.js
 ```
+
+https://www.npmjs.com/package/ts-node
+
+https://github.com/Microsoft/TypeScript-Node-Starter
+
+installした
+
+https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin
