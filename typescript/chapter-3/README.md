@@ -1,3 +1,4 @@
+brew install deno
 
 deno run main.ts                                                                                                                             feature/programming-typescript
 
