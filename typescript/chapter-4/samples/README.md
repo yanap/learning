@@ -1,3 +1,7 @@
+brew install deno
+
+denoを使って、tsを実行しています
+
 deno run generator.ts                                                                                                            master ◼
 ```
 Check file:///Users/m-yanai/dev/src/github.com/yanap/learning/typescript/chapter-4/samples/generator.ts
