@@ -20,3 +20,5 @@ function f() { console.log(argumants) }
 ```js
 function f(...args: unknown[]) { console.log(args) } 
 ```
+
+3. exercise.tsに記載
