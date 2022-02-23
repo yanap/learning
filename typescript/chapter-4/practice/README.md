@@ -21,4 +21,6 @@ function f() { console.log(argumants) }
 function f(...args: unknown[]) { console.log(args) } 
 ```
 
-3. exercise.tsに記載
+3. three.tsに記載
+
+4. four.tsに記載

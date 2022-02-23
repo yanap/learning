@@ -32,3 +32,4 @@ let reserve: Reserve = (
         // すぐに出発する旅行を予約する
     }
 }
+
