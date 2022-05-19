@@ -25,5 +25,10 @@ class TestCap(unittest.TestCase):
 		result = cap.just_do_it(text)
 		self.assertEqual(result, "I'm Fresh Out Of Ideas")
 
+	def testwords_with_quotes(self):
+		text = "\"You're despicable,\" said Daffy Duck"
+		result = cap.just_do_it(text)
+		self.assertEqual(result, "\"You're Despicable,\" Said Daffy Duck")
+
 if __name__ == '__main__':
 	unittest.main()
