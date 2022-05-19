@@ -20,5 +20,10 @@ class TestCap(unittest.TestCase):
 		result = cap.just_do_it(text)
 		self.assertEqual(result, 'A Veritable Flock Of Ducks')
 
+	def test_words_with_apostrophes(self):
+		text = "I'm fresh out of ideas"
+		result = cap.just_do_it(text)
+		self.assertEqual(result, "I'm Fresh Out Of Ideas")
+
 if __name__ == '__main__':
 	unittest.main()
