@@ -4,7 +4,7 @@ def process_cities(filename):
 	with open(filename, 'r') as file:
 		for line in file:
 			line = line.strip()
-			if 'quit' in line.lower():
+			if 'quit' == line.lower():
 				return
 			country, city = line.split(',')
 			city = city.strip()
