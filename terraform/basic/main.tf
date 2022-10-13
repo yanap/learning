@@ -1,5 +1,5 @@
 resource "google_compute_instance" "default" {
-  name         = "test2"
+  name         = "test3"
   machine_type = "f1-micro"
   zone         = "asia-northeast1-a"
 
@@ -14,6 +14,6 @@ resource "google_compute_instance" "default" {
   }
 
   lifecycle {
-    create_before_destroy = true
+    prevent_destroy = true
   }
 }
